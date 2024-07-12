@@ -44,6 +44,9 @@ jobs:
         with:
           path: ./dist  # Change this to the folder name of your build output
 
+        env:
+            VITE_TEST_SECRET: ${{ env.VITE_TEST_SECRET }}
+
   deploy:
     environment:
       name: github-pages
